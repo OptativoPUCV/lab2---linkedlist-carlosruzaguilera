@@ -28,9 +28,9 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList(List *lista, int largo) {
-  int = 1
-  for(i,i<largo,i++)
+List * createList(int arr[], int size) {
+  if (size==0) return NULL;
+  Node *head = malloc(sizeof(Node)
   return NULL;
 }
 
