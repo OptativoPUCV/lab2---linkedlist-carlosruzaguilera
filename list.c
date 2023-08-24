@@ -30,7 +30,13 @@ Node * createNode(void * data) {
 
 List * createList(int arr[], int size) {
   if (size==0) return NULL;
-  Node *head = malloc(sizeof(Node)
+  Node *head = malloc(sizeof(Node);
+  head -> numero = arr[];
+  head -> siguiente = NULL;
+
+  Node *current = head;
+  
+  
   return NULL;
 }
 
