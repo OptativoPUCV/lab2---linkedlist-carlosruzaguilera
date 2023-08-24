@@ -35,6 +35,10 @@ List * createList(int arr[], int size) {
   head -> siguiente = NULL;
 
   Node *current = head;
+
+  for(int i=1; i<size; i++){
+  
+  }
   
   
   return NULL;
