@@ -2,3 +2,35 @@ Thu 24 Aug 2023 08:42:16 PM UTC:
  tests:  0|6
 total_score: 0/70
 15ff5d6
+Thu 24 Aug 2023 08:50:33 PM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c:31:8: error: conflicting types for ‘createList’; have ‘List *(List *, int)’ {aka ‘struct List *(struct List *, int)’}
+   31 | List * createList(List *lista, int largo) {
+      |        ^~~~~~~~~~
+In file included from list.c:4,
+                 from test.c:5:
+list.h:6:8: note: previous declaration of ‘createList’ with type ‘List *(void)’ {aka ‘struct List *(void)’}
+    6 | List * createList(void);
+      |        ^~~~~~~~~~
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:7: error: expected identifier or ‘(’ before ‘=’ token
+   32 |   int = 1
+      |       ^
+test.c: In function ‘test_create’:
+test.c:84:15: error: too few arguments to function ‘createList’
+   84 |     List* L = createList();
+      |               ^~~~~~~~~~
+In file included from test.c:5:
+list.c:31:8: note: declared here
+   31 | List * createList(List *lista, int largo) {
+      |        ^~~~~~~~~~
+list.c: In function ‘createList’:
+list.c:35:1: error: control reaches end of non-void function [-Werror=return-type]
+   35 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1619dec
