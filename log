@@ -469,3 +469,38 @@ Fri 25 Aug 2023 09:53:55 PM UTC:
  tests:  9|3
 total_score: 35/70
 7fcea45
+Fri 25 Aug 2023 10:03:01 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:1: error: expected ‘,’ or ‘;’ before ‘}’ token
+   67 | }
+      | ^
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+In file included from test.c:5:
+list.c:66:9: error: unused variable ‘newNode’ [-Werror=unused-variable]
+   66 |   Node *newNode = createNode(data)
+      |         ^~~~~~~
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:91:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+   91 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:82:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+   82 | void * popBack(List * list) {
+      |        ^~~~~~~
+list.c:69:6: error: ‘pushBack’ defined but not used [-Werror=unused-function]
+   69 | void pushBack(List * list, void * data) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bc4d86b
