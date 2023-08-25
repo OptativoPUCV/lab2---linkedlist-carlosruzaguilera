@@ -280,3 +280,20 @@ Fri 25 Aug 2023 09:01:14 PM UTC:
  tests:  1|5
 total_score: 10/70
 59f0f71
+Fri 25 Aug 2023 09:05:12 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:42:29: error: expected ‘;’ before ‘return’
+   42 |   list->current = list->head
+      |                             ^
+      |                             ;
+   43 |     return NULL;
+      |     ~~~~~~                   
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+354341d
