@@ -320,3 +320,16 @@ Fri 25 Aug 2023 09:07:18 PM UTC:
  tests:  1|5
 total_score: 10/70
 6da3786
+Fri 25 Aug 2023 09:07:51 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:43:26: error: expected ‘;’ before ‘}’ token
+   43 |   return list->head->data
+      |                          ^
+      |                          ;
+   44 | }
+      | ~                         
+Compilation failed
+45a2cad
