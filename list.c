@@ -115,6 +115,7 @@ void * popCurrent(List * list) {
   if(!list || !list->current) return NULL;
   Node *toDelete = list->current;
   void* data = toDelete->data;
+  return data;
     return NULL;
 }
 
