@@ -539,3 +539,26 @@ Fri 25 Aug 2023 10:05:54 PM UTC:
  tests:  10|2
 total_score: 45/70
 8ee66db
+Fri 25 Aug 2023 10:13:48 PM UTC: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:86:15: error: ‘List’ {aka ‘struct List’} has no member named ‘curent’; did you mean ‘current’?
+   86 |     if(!list->curent) {
+      |               ^~~~~~
+      |               current
+list.c:87:9: error: implicit declaration of function ‘pushront’; did you mean ‘pushFront’? [-Werror=implicit-function-declaration]
+   87 |         pushront(list, data);
+      |         ^~~~~~~~
+      |         pushFront
+list.c:89:5: error: expected expression before ‘}’ token
+   89 |     }
+      |     ^
+list.c:89:5: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+list.c:84:6: note: declared here
+   84 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8dbc419

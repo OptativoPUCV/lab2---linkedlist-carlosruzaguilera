@@ -82,6 +82,11 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  if(list) return;
+    if(!list->curent) {
+        pushront(list, data);
+        return
+    }
 }
 
 void * popFront(List * list) {
