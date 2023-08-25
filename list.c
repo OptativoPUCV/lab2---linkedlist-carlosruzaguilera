@@ -38,6 +38,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+  if(!list || !list->head) return NULL;
     return NULL;
 }
 
