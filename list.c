@@ -113,8 +113,8 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
   if(!list || !list->current) return NULL;
-  Nde *toDelete = list->current;
-  void* data = toDlete->data
+  Node *toDelete = list->current;
+  void* data = toDelete->data;
     return NULL;
 }
 

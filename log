@@ -666,3 +666,14 @@ list.c:119:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 6a8f698
+Fri 25 Aug 2023 10:27:51 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:117:9: error: unused variable ‘data’ [-Werror=unused-variable]
+  117 |   void* data = toDelete->data;
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+04e8685
