@@ -339,3 +339,17 @@ Fri 25 Aug 2023 09:08:08 PM UTC:
  tests:  2|5
 total_score: 15/70
 4fe2f3c
+Fri 25 Aug 2023 09:11:44 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:47:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   47 |   if(!list || !list->current || !list->current->next) ;
+      |   ^~
+list.c:48:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   48 |     return NULL;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+67ace53
