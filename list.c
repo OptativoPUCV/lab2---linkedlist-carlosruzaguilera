@@ -115,8 +115,13 @@ void * popCurrent(List * list) {
   if(!list || !list->current) return NULL;
   Node *toDelete = list->current;
   void* data = toDelete->data;
+
+  if(toDelete->prev {
+        toDelete->prev->next = toDelete->nxt;
+    } else {
+        list->head = toDelet>next;
+    }
   return data;
-    return NULL;
 }
 
 void cleanList(List * list) {
