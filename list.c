@@ -37,6 +37,7 @@ List * createList(int arr[], int size) {
   Node *current = head;
 
   for(int i=1; i<size; i++){
+    current -> siguiente
   
   }
   
