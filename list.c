@@ -116,10 +116,10 @@ void * popCurrent(List * list) {
   Node *toDelete = list->current;
   void* data = toDelete->data;
 
-  if(toDelete->prev {
-        toDelete->prev->next = toDelete->nxt;
+  if(toDelete->prev) {
+        toDelete->prev->next = toDelete->next;
     } else {
-        list->head = toDelet>next;
+        list->head = toDelete->next;
     }
   return data;
 }
