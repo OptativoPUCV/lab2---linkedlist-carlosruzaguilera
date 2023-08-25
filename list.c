@@ -47,10 +47,11 @@ void * nextList(List * list) {
   if(!list || !list->current || !list->current->next) return NULL;
   list->current = list->current->next;
   return list->current->data;
-    return NULL;
+  return NULL;
 }
 
 void * lastList(List * list) {
+  if(!list || !list->tail) return NULL;
     return NULL;
 }
 
