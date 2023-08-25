@@ -418,3 +418,17 @@ Fri 25 Aug 2023 09:22:21 PM UTC:
  tests:  6|4
 total_score: 25/70
 d6d24bd
+Fri 25 Aug 2023 09:51:49 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:60:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   60 |   if(!list || !list->current || !list->current->prev);
+      |   ^~
+list.c:61:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   61 |     return NULL;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7dd26a9
