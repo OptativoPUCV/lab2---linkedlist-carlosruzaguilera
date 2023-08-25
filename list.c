@@ -59,7 +59,7 @@ void * lastList(List * list) {
 void * prevList(List * list) {
   if(!list || !list->current || !list->current->prev)return NULL;
   list->current = list->current->prev;
-  return list->current->data
+  return list->current->data;
     return NULL;
 }
 
