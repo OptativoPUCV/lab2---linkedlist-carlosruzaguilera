@@ -504,3 +504,14 @@ list.c:69:6: error: ‘pushBack’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 bc4d86b
+Fri 25 Aug 2023 10:03:09 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:66:9: error: unused variable ‘newNode’ [-Werror=unused-variable]
+   66 |   Node *newNode = createNode(data);
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+29411d7
