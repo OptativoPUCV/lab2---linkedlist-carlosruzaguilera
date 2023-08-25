@@ -121,7 +121,17 @@ void * popCurrent(List * list) {
     } else {
         list->head = toDelete->next;
     }
-  return data;
+
+    if(toDelete->next) {
+        toDelete->next->prev = toDelete->prev;
+        list->current = toDelete->next;
+    } else {
+        list->tail = toDelete->prev;
+        list->current = NULL; 
+    }
+
+    free(toDelete);
+    return data;
 }
 
 void cleanList(List * list) {
