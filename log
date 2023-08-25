@@ -568,3 +568,43 @@ Fri 25 Aug 2023 10:14:01 PM UTC:
  tests:  10|2
 total_score: 45/70
 41282b6
+Fri 25 Aug 2023 10:15:56 PM UTC: 
+ list.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:95:14: error: ‘Node’ has no member named ‘pev’; did you mean ‘prev’?
+   95 |     newNode->pev = list->current;
+      |              ^~~
+      |              prev
+list.c:99:22: error: ‘newode’ undeclared (first use in this function); did you mean ‘newNode’?
+   99 |         list->tail = newode;
+      |                      ^~~~~~
+      |                      newNode
+list.c:99:22: note: each undeclared identifier is reported only once for each function it appears in
+list.c:101:34: error: expected ‘;’ before ‘}’ token
+  101 |     list->current->next = newNode
+      |                                  ^
+      |                                  ;
+  102 |     }
+      |     ~                             
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:118:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  118 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:109:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+  109 | void * popBack(List * list) {
+      |        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0d42996
