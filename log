@@ -444,3 +444,16 @@ Fri 25 Aug 2023 09:52:36 PM UTC:
  tests:  6|4
 total_score: 25/70
 7846cf5
+Fri 25 Aug 2023 09:53:24 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:62:29: error: expected ‘;’ before ‘return’
+   62 |   return list->current->data
+      |                             ^
+      |                             ;
+   63 |     return NULL;
+      |     ~~~~~~                   
+Compilation failed
+d0c2b98
