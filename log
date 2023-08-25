@@ -359,3 +359,14 @@ Fri 25 Aug 2023 09:12:06 PM UTC:
  tests:  2|5
 total_score: 15/70
 06a23a5
+Fri 25 Aug 2023 09:16:22 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:48:17: error: assignment to ‘Node *’ from incompatible pointer type ‘List *’ {aka ‘struct List *’} [-Werror=incompatible-pointer-types]
+   48 |   list->current = list;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+0bedab5
