@@ -268,3 +268,9 @@ list.c:67:6: error: ‘pushBack’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 ab4ca6a
+Fri 25 Aug 2023 08:59:59 PM UTC: 
+ list.c | 22 +++++++---------------
+ 1 file changed, 7 insertions(+), 15 deletions(-)
+ tests:  1|5
+total_score: 10/70
+2b778a2

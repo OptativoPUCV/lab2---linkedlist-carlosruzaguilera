@@ -28,21 +28,13 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList(int arr[], int size) {
-  if (size==0) return NULL;
-  Node *head = malloc(sizeof(Node);
-  head -> numero = arr[];
-  head -> siguiente = NULL;
-
-  Node *current = head;
-
-  for(int i=1; i<size; i++){
-    current -> siguiente
-  
-  }
-  
-  
-  return NULL;
+List * createList() {
+    List * newList = (List *)malloc(sizeof(List));
+    assert(newList != NULL);
+    newList->head = NULL;
+    newList->tail = NULL;
+    newList->current = NULL;
+    return newList;
 }
 
 void * firstList(List * list) {
